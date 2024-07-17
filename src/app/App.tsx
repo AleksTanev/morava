@@ -3,16 +3,14 @@ import ComponentExample from "../shared/components/ComponentExample/ComponentExa
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/component-example" element={<ComponentExample examples='test' />} />
-        </Routes>
-        <Link to="/component-example">Component Example</Link>
-      </BrowserRouter>
-      
-      <h1>Morava</h1>
-    </>
+      <>
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/component-example" element={<ComponentExample exampleText="test" />} />
+              </Routes>
+          </BrowserRouter>
+          <h1>Morava</h1>
+      </>
   );
 }
 

@@ -1,9 +1,9 @@
 export interface ComponentExampleProps {
-    examples: string;
+    exampleText: string;
 }
 
-const ComponentExample = ({ examples }: ComponentExampleProps) => {
-    return <>Component Example</>;
+const ComponentExample = ({ exampleText }: ComponentExampleProps) => {
+    return <>{exampleText}</>;
 };
 
 export default ComponentExample;

@@ -1,0 +1,43 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--base-green);
+    color: white;
+}
+
+/* Logo styling */
+.navbar-brand {
+    img {
+        height: 50px;
+    }
+}
+
+/* Styling for navigation items */
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+}

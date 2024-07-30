@@ -4,7 +4,7 @@
     align-items: center;
     padding: 0.5rem 1rem;
     background-color: var(--base-green);
-    color: var(--bg-color);
+    color: var(--background-color);
 }
 
 /* Logo styling */

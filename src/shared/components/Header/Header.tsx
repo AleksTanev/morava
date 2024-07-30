@@ -29,7 +29,7 @@ const Header = () => {
                     </NavLink>
                 </NavItem>
             ))}
-            <Button onClick={toggleTheme}>Toggle to {theme === "light" ? "Dark" : "Light"} Theme</Button>
+            <Button className={`toggle-switch ${theme === "light" ? "dark" : "light"}`} onClick={toggleTheme} />
         </Navbar>
     );
 };

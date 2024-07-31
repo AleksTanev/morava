@@ -2,9 +2,6 @@
   --background-color: #ffffff;
   --text-color: black;
   --base-green: #85A63F;
-  --base-green-dark: #47592D;
-  --base-green-light: #A3BF3F;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 }
@@ -17,4 +14,5 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
 }

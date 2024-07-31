@@ -5,8 +5,6 @@ import Logo from "../../../assets/2.png";
 import "./Header.css";
 import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
 
-export interface HeaderProps {}
-
 const Header = () => {
     return (
         <Navbar className="main-header">

@@ -1,7 +1,7 @@
 import { Navbar, NavbarBrand, NavItem } from "reactstrap";
 import { headerTitles } from "./constants";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../../assets/2.png";
+import Logo from "../../../assets/logos/Morava-logo-black.svg";
 import "./Header.css";
 import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
 

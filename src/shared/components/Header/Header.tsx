@@ -6,8 +6,6 @@ import "./Header.css";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../contexts/ThemeProvider";
 
-export interface HeaderProps {}
-
 const Header = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
 

@@ -2,6 +2,8 @@
   --background-color: #ffffff;
   --text-color: black;
   --base-green: #85A63F;
+  --base-green-dark: #47592D;
+  --base-green-light: #A3BF3F;
   line-height: 1.5;
   font-weight: 400;
 }

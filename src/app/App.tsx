@@ -4,6 +4,7 @@ import About from "../shared/Pages/About/About";
 import Services from "../shared/Pages/Services/Services";
 import Faq from "../shared/Pages/Faq/Faq";
 import Contacts from "../shared/Pages/Contacts/Contacts";
+import PageNotFound from "../shared/Pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
             <Route
               path="/contact-us"
               element={<Contacts contactsText="Contacts text" />}
+            />
+            <Route
+              path="*"
+              element={<PageNotFound />}
             />
           </Route>
         </Routes>

@@ -7,8 +7,8 @@ import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
 
 const Header = () => {
     return (
-        <Navbar className="main-header">
-            <NavbarBrand>
+        <Navbar className="main-header p-3">
+            <NavbarBrand tag={"div"}>
                 <Link to="/" className="navbar-brand">
                     <img src={Logo} alt="logo" />
                 </Link>

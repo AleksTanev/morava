@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
+import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from "reactstrap";
 import { items } from "./constants";
+import "./PhotoCarousel.css";
 
 const PhotoCarousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -25,15 +26,14 @@ const PhotoCarousel = () => {
 
     const slides = items.map((item) => {
         return (
-            <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
-                <img src={item.src} alt={item.altText} className="d-block w-100" />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+            <CarouselItem className="carousel-item" onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
+                <img src={item.src} alt={item.altText} className="carousel-img" />
             </CarouselItem>
         );
     });
 
     return (
-        <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+        <Carousel className="carousel" activeIndex={activeIndex} next={next} previous={previous}>
             <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
             <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />

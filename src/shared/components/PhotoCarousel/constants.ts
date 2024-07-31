@@ -6,16 +6,13 @@ export const items = [
     {
         src: HomeImage1,
         altText: "Slide 1",
-        caption: "Slide 1 Caption",
     },
     {
         src: HomeImage2,
         altText: "Slide 2",
-        caption: "Slide 2 Caption",
     },
     {
         src: HomeImage3,
         altText: "Slide 3",
-        caption: "Slide 3 Caption",
     },
 ];

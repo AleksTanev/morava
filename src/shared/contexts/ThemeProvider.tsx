@@ -1,8 +1,12 @@
 import { createContext, useState, useEffect } from "react";
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext<{ theme: string; toggleTheme?: () => void }>({ theme: "light" });
 
-const ThemeProvider = ({ children }) => {
+export interface ThemeProviderProps {
+    children: JSX.Element;
+}
+
+const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const [theme, setTheme] = useState("light");
 
     useEffect(() => {

@@ -9,7 +9,7 @@
   font-weight: 400;
 }
 
-[data-theme='dark'] {
+[theme='dark'] {
     --background-color: black;
     --text-color: white;
 }

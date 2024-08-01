@@ -33,14 +33,14 @@
 
   .accordion-button:focus {
     z-index: 3;
-    border-color: var(--base-green-light);
+    border-color: var(--base-green);
     outline: 0;
-    box-shadow: 0 0 0 0.25rem var(--base-green-light);
+    box-shadow: 0 0 0 0.25rem var(--base-green);
   }
 
   .accordion-button:not(.collapsed) {
     color: #000;
-    background-color: var(--base-green-light);
+    background-color: var(--base-green);
   }
 
   .accordion-body {

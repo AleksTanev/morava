@@ -17,7 +17,7 @@ function App() {
               path="/services"
               element={<Services servicesText="Services text" />}
             />
-            <Route path="/faq" element={<Faq faqText="Faq text" />} />
+            <Route path="/faq" element={<Faq />} />
             <Route
               path="/contact-us"
               element={<Contacts contactsText="Contacts text" />}

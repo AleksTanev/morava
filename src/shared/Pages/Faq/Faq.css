@@ -14,7 +14,7 @@
     width: 100%;
     padding: 1rem 1.25rem;
     font-size: 1rem;
-    color: #212529;
+    color: #000;
     text-align: left;
     background-color: #fff;
     border: 0;
@@ -39,7 +39,11 @@
   }
 
   .accordion-button:not(.collapsed) {
-    color: #1c2634;
+    color: #000;
     background-color: var(--base-green-light);
+  }
+
+  .accordion-body {
+    color: #000;
   }
 }

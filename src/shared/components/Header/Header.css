@@ -4,6 +4,10 @@
     align-items: center;
     background-color: var(--base-green);
     color: var(--background-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Logo styling */

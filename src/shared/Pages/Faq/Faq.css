@@ -45,11 +45,16 @@
 
   .accordion-body {
     color: var(--text-color);
-    border: 1px solid var(--background-color);
   }
 
   .accordion-item {
     background-color: var(--background-color);
-    border: 1px solid var(--text-color);
+    border-top: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
+
+  .accordion-item-border-bottom {
+    border-bottom: 1px solid var(--text-color);
   }
 }

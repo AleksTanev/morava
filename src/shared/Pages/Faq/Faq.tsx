@@ -55,7 +55,7 @@ const Faq = () => {
                     overflow.
                   </AccordionBody>
                 </AccordionItem>
-                <AccordionItem>
+                <AccordionItem className="accordion-item-border-bottom">
                   <AccordionHeader targetId="3">
                     Accordion Item 3
                   </AccordionHeader>

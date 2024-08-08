@@ -17,16 +17,46 @@ export interface ContactsProps {
 }
 
 const Contacts = ({ contactsText }: ContactsProps) => {
-  const [formName, setFormName] = useState("");
-  const [formEmail, setFormEmail] = useState("");
-  const [formMessage, setFormMessage] = useState("");
+  const [nameFormError, setNameFormError] = useState("");
+  const [emailFormError, setEmailFormError] = useState("");
+
+  const [state, setState] = useState({
+    formName: "",
+    formEmail: "",
+    formMessage: "",
+  });
+
+  const isEmailValid = (email: string) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setState({
+      ...state,
+      [event.target.name]: value,
+    });
+  };
 
   const sendForm = (event: React.FormEvent) => {
     event.preventDefault();
 
-    console.log(formName);
-    console.log(formEmail);
-    console.log(formMessage);
+    if (state.formName.trim().length < 3) {
+      setNameFormError("Invalid name!");
+    }
+
+    if (state.formName.trim().length > 2) {
+      setNameFormError("");
+    }
+
+    if (!isEmailValid(state.formEmail.trim())) {
+      setEmailFormError("Invalid email format!");
+    }
+
+    if (isEmailValid(state.formEmail.trim())) {
+      setEmailFormError("");
+    }
   };
 
   return (
@@ -78,6 +108,37 @@ const Contacts = ({ contactsText }: ContactsProps) => {
               xs="12"
               className="right-sidebar"
             >
+              {nameFormError && (
+                <Row>
+                  <Col
+                    xxl="12"
+                    xl="12"
+                    lg="12"
+                    md="12"
+                    sm="12"
+                    xs="12"
+                    className="error-message"
+                  >
+                    {nameFormError}
+                  </Col>
+                </Row>
+              )}
+
+              {emailFormError && (
+                <Row>
+                  <Col
+                    xxl="12"
+                    xl="12"
+                    lg="12"
+                    md="12"
+                    sm="12"
+                    xs="12"
+                    className="error-message"
+                  >
+                    {emailFormError}
+                  </Col>
+                </Row>
+              )}
               <Form onSubmit={sendForm}>
                 <Row>
                   <Col xxl="6" xl="6" lg="6" md="6" sm="12" xs="12">
@@ -86,10 +147,11 @@ const Contacts = ({ contactsText }: ContactsProps) => {
                       <Input
                         id="formName"
                         name="formName"
+                        value={state.formName}
                         placeholder="Full Name"
                         type="text"
                         className="input-form"
-                        onChange={(event) => setFormName(event.target.value)}
+                        onChange={handleInputChange}
                       />
                     </FormGroup>
                   </Col>
@@ -99,10 +161,11 @@ const Contacts = ({ contactsText }: ContactsProps) => {
                       <Input
                         id="formEmail"
                         name="formEmail"
+                        value={state.formEmail}
                         placeholder="Email"
                         type="email"
                         className="input-form"
-                        onChange={(event) => setFormEmail(event.target.value)}
+                        onChange={handleInputChange}
                       />
                     </FormGroup>
                   </Col>
@@ -114,11 +177,12 @@ const Contacts = ({ contactsText }: ContactsProps) => {
                       <Input
                         id="formMessage"
                         name="formMessage"
+                        value={state.formMessage}
                         placeholder="Your Message"
                         type="textarea"
                         rows="8"
                         className="input-form"
-                        onChange={(event) => setFormMessage(event.target.value)}
+                        onChange={handleInputChange}
                       />
                     </FormGroup>
                   </Col>

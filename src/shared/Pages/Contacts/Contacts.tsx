@@ -1,14 +1,10 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import WorkingHours from "../../components/WorkingHours/WorkingHours";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import contacts from "../../components/ContactForm/constants";
+import constants from "../../components/ContactForm/constants";
 import "./Contacts.css";
 
 export interface ContactsProps {
@@ -20,6 +16,8 @@ const Contacts = ({ contactsText }: ContactsProps) => {
 
   const [nameFormError, setNameFormError] = useState("");
   const [emailFormError, setEmailFormError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [emailNotSend, setEmailNotSend] = useState("");
 
   const [state, setState] = useState({
     formName: "",
@@ -44,7 +42,7 @@ const Contacts = ({ contactsText }: ContactsProps) => {
     event.preventDefault();
 
     if (state.formName.trim().length < 3) {
-      setNameFormError("Invalid name!");
+      setNameFormError(constants.invalidName);
     }
 
     if (state.formName.trim().length > 2) {
@@ -52,7 +50,7 @@ const Contacts = ({ contactsText }: ContactsProps) => {
     }
 
     if (!isEmailValid(state.formEmail.trim())) {
-      setEmailFormError("Invalid email format!");
+      setEmailFormError(constants.invalidEmail);
     }
 
     if (isEmailValid(state.formEmail.trim())) {
@@ -67,17 +65,17 @@ const Contacts = ({ contactsText }: ContactsProps) => {
     ) {
       emailjs
         .sendForm(
-          contacts.serviceID,
-          contacts.templateID,
+          constants.serviceID,
+          constants.templateID,
           form.current,
-          contacts.publicKey
+          constants.publicKey
         )
         .then(
-          (result) => {
-            console.log(result.text);
+          () => {
+            setSuccessMessage(constants.successMessage);
           },
-          (error) => {
-            console.log(error.text);
+          () => {
+            setEmailNotSend(constants.emailNotSend);
           }
         );
     }
@@ -113,6 +111,8 @@ const Contacts = ({ contactsText }: ContactsProps) => {
                 formRef={form}
                 nameFormError={nameFormError}
                 emailFormError={emailFormError}
+                successMessage={successMessage}
+                emailNotSend={emailNotSend}
                 handleFormSubmit={handleFormSubmit}
                 handleInputChange={handleInputChange}
                 stateFormName={state.formName}

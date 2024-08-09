@@ -5,6 +5,8 @@ const ContactForm = (props: any) => {
   const formRef = props.formRef;
   const nameFormError = props.nameFormError;
   const emailFormError = props.emailFormError;
+  const successMessage = props.successMessage;
+  const emailNotSend = props.emailNotSend;
   const handleFormSubmit = props.handleFormSubmit;
   const handleInputChange = props.handleInputChange;
   const stateFormName = props.stateFormName;
@@ -24,7 +26,7 @@ const ContactForm = (props: any) => {
             xs="12"
             className="error-message"
           >
-            {nameFormError}
+            <div className="p-3 bg-danger my-2 rounded">{nameFormError}</div>
           </Col>
         </Row>
       )}
@@ -40,7 +42,39 @@ const ContactForm = (props: any) => {
             xs="12"
             className="error-message"
           >
-            {emailFormError}
+            <div className="p-3 bg-danger my-2 rounded">{emailFormError}</div>
+          </Col>
+        </Row>
+      )}
+
+      {emailNotSend && (
+        <Row>
+          <Col
+            xxl="12"
+            xl="12"
+            lg="12"
+            md="12"
+            sm="12"
+            xs="12"
+            className="error-message"
+          >
+            <div className="p-3 bg-danger my-2 rounded">{emailNotSend}</div>
+          </Col>
+        </Row>
+      )}
+
+      {successMessage && (
+        <Row>
+          <Col
+            xxl="12"
+            xl="12"
+            lg="12"
+            md="12"
+            sm="12"
+            xs="12"
+            className="error-message"
+          >
+            <div className="p-3 bg-success my-2 rounded">{successMessage}</div>
           </Col>
         </Row>
       )}

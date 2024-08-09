@@ -1,9 +1,16 @@
+import PageTitle from "../../components/PageTitle/PageTitle";
+
 export interface AboutProps {
-    aboutText: string;
+  aboutText: string;
 }
 
 const About = ({ aboutText }: AboutProps) => {
-    return <>{aboutText}</>;
+  return (
+    <>
+      <PageTitle pageTitleText="About" />
+      {aboutText}
+    </>
+  );
 };
 
 export default About;

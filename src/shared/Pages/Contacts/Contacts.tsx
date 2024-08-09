@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Container,
   Row,
@@ -10,6 +11,8 @@ import {
   Button,
 } from "reactstrap";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import WorkingHours from "../../components/WorkingHours/WorkingHours";
+import contacts from "../../components/ContactForm/constants";
 import "./Contacts.css";
 
 export interface ContactsProps {
@@ -17,6 +20,8 @@ export interface ContactsProps {
 }
 
 const Contacts = ({ contactsText }: ContactsProps) => {
+  const form = useRef<HTMLFormElement>(null);
+
   const [nameFormError, setNameFormError] = useState("");
   const [emailFormError, setEmailFormError] = useState("");
 
@@ -39,7 +44,7 @@ const Contacts = ({ contactsText }: ContactsProps) => {
     });
   };
 
-  const sendForm = (event: React.FormEvent) => {
+  const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
     if (state.formName.trim().length < 3) {
@@ -56,6 +61,22 @@ const Contacts = ({ contactsText }: ContactsProps) => {
 
     if (isEmailValid(state.formEmail.trim())) {
       setEmailFormError("");
+    }
+
+    if (form.current === null) return;
+
+    if (
+      state.formName.trim().length > 2 &&
+      isEmailValid(state.formEmail.trim())
+    ) {
+      emailjs.sendForm(contacts.serviceID, contacts.templateID, form.current, contacts.publicKey).then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     }
   };
 
@@ -74,30 +95,7 @@ const Contacts = ({ contactsText }: ContactsProps) => {
               xs="12"
               className="left-sidebar"
             >
-              <h3>
-                <span>Office Working</span> Hours
-              </h3>
-              <p>
-                <strong>Monday:</strong> 9:00 am – 5:00 pm
-              </p>
-              <p>
-                <strong>Tuesday:</strong> 9:00 am – 5:00 pm
-              </p>
-              <p>
-                <strong>Wednesday:</strong> 9:00 am – 5:00 pm
-              </p>
-              <p>
-                <strong>Thursday:</strong> 9:00 am – 5:00 pm
-              </p>
-              <p>
-                <strong>Friday:</strong> 9:00 am – 5:00 pm
-              </p>
-              <p>
-                <strong>Saturday:</strong> 9:00 am – 2:00 pm
-              </p>
-              <p>
-                <strong>Sunday:</strong> Holiday
-              </p>
+              <WorkingHours />
             </Col>
             <Col
               xxl="9"
@@ -139,7 +137,8 @@ const Contacts = ({ contactsText }: ContactsProps) => {
                   </Col>
                 </Row>
               )}
-              <Form onSubmit={sendForm}>
+              <Form onSubmit={handleFormSubmit} innerRef={form}>
+                <Input id="toName" name="toName" value={contacts.toName} type="hidden" />
                 <Row>
                   <Col xxl="6" xl="6" lg="6" md="6" sm="12" xs="12">
                     <FormGroup>
@@ -192,7 +191,7 @@ const Contacts = ({ contactsText }: ContactsProps) => {
                     <Button
                       className="button-display button-color"
                       color="success"
-                      onClick={sendForm}
+                      onClick={handleFormSubmit}
                     >
                       Send
                     </Button>

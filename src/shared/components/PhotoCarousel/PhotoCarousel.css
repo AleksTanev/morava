@@ -1,17 +1,29 @@
-.carousel {
+
+
+.carousel-img {
     width: 100%;
-    height: 95vh;
+    height: 100%;
+    object-fit: contain; 
 }
 
-.carousel-item {
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px; /* Adjust this value as needed to position the indicators below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 95vh;
-}
-
-.carousel-image {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-}
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .carousel-indicators li {
+    background-color: #000; /* Color for indicators */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }

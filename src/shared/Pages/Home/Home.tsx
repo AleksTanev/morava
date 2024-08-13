@@ -1,12 +1,14 @@
-import { Container, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import PhotoCarousel from "../../components/PhotoCarousel/PhotoCarousel";
 import "./Home.css";
 
 const Home = () => {
     return (
-        <Container className="home-page">
-            <Row className="carousel-container">
-                <PhotoCarousel />;
+        <Container className="carousel-container">
+            <Row>
+                <Col>
+                    <PhotoCarousel />;
+                </Col>
             </Row>
         </Container>
     );

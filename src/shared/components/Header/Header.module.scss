@@ -1,8 +1,11 @@
+@import '@/styles.scss';
+
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--base-green);
+    padding: 0.5rem 1rem;
+    background-color: $base-green;
     color: var(--background-color);
     position: fixed;
     top: 0;

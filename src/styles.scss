@@ -1,10 +1,13 @@
+$base-green: #85A63F;
+$base-green-dark: #47592D;
+$base-green-light: #A3BF3F;
+
 :root {
-  --background-color: #ffffff;
+  --background-color: white;
   --text-color: black;
-  --base-green: #85A63F;
-  --base-green-dark: #47592D;
-  --base-green-light: #A3BF3F;
   line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -16,5 +19,4 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Nunito', sans-serif;
 }

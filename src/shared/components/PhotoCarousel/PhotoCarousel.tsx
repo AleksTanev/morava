@@ -5,7 +5,7 @@ import HomeImage1 from "@/assets/home-images/1.jpg";
 import HomeImage2 from "@/assets/home-images/2.jpg";
 import HomeImage3 from "@/assets/home-images/3.jpg";
 
-export const slideItems = [
+const slideItems = [
     {
         src: HomeImage1,
         altText: "Slide 1",

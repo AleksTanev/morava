@@ -30,7 +30,7 @@ const headerTitles = [
 const Header = () => {
     return (
         <Navbar className={styles["main-header"]}>
-            <div className={styles["navbar-brand"]}>
+            <div className={styles["navbar-brand-container"]}>
                 <BrandLogo />
             </div>
             <div className={styles["nav-item-container"]}>

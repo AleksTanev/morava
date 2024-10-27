@@ -2,8 +2,8 @@
 
 .toggleSwitch {
     position: relative;
-    width: 60px;
-    height: 30px;
+    width: 2em;
+    height: 1.2em;
     border-radius: 15px;
     border-style: none;    
     background-color: $base-green-dark;
@@ -13,20 +13,20 @@
 
     &::before {
       content: '';
-      width: 26px;
-      height: 26px;
+      width: 1em;
+      height: 1em;
       border-radius: 50%;
       background-color: $base-green-light;
       position: absolute;
-      top: 2px;
-      left: 2px;
+      top: 1.2px;
+      left: 1px;
       transition: transform 0.3s ease;
     }
 
     &.dark{
 
       &::before {
-        transform: translateX(30px);
+        transform: translateX(1em);
       }
     }
 }

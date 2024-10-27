@@ -4,6 +4,8 @@ import brandLogoLight from "@/assets/logos/Morava-logo-black.svg";
 import brandLogoDark from "@/assets/logos/Morava-logo-white.svg";
 import styles from "./Header.module.scss";
 import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeProvider";
 
 const headerTitles = [
     {
@@ -29,10 +31,12 @@ const headerTitles = [
 ];
 
 const Header = () => {
+    const { theme } = useContext(ThemeContext);
+
     return (
         <Navbar className={styles["main-header"]}>
             <Link to="/" className={styles["navbar-brand"]}>
-                <img src={brandLogoLight} alt="logo" />
+                <img src={theme === "light" ? brandLogoLight : brandLogoDark} alt="logo" />
             </Link>
             <div className={styles["nav-item-container"]}>
                 {headerTitles.map(({ title, route }) => (

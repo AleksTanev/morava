@@ -7,16 +7,12 @@
     padding: 0.5rem 1rem;
     background-color: var(--background-color);
     color: var(--text-color);
-    top: 0;
     position: sticky;
     width: 100%;
-    z-index: 1000;
 }
-/* Logo styling */
+
 .navbar-brand {
-    img {
-        height: 2.4rem;
-    }
+        max-height: 2.4rem;
 }
 
 .nav-item-container {
@@ -25,7 +21,6 @@
     gap: 1rem;
 }
 
-/* Styling for navigation items */
 .nav-item {
     margin-left: 1rem;
 }
@@ -39,7 +34,6 @@
     color: $base-green-light;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
     .main-header {
         flex-direction: column;

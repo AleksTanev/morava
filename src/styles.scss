@@ -3,7 +3,7 @@ $base-green-dark: #47592D;
 $base-green-light: #A3BF3F;
 
 :root {
-  --background-color: white;
+  --background-color: #f6f6f6;
   --text-color: black;
   line-height: 1.5;
   font-family: 'Nunito', sans-serif;
@@ -12,7 +12,7 @@ $base-green-light: #A3BF3F;
 }
 
 [theme='dark'] {
-    --background-color: black;
+    --background-color: #070707;
     --text-color: white;
 }
 
@@ -20,3 +20,11 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;  /* Takes full height of container */
+}
+

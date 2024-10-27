@@ -5,19 +5,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: $base-green;
-    color: var(--background-color);
-    position: fixed;
+    background-color: var(--background-color);
+    color: var(--text-color);
     top: 0;
+    position: sticky;
     width: 100%;
     z-index: 1000;
 }
-
 /* Logo styling */
 .navbar-brand {
     img {
-        height: 50px;
+        height: 2.4rem;
     }
+}
+
+.nav-item-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* Styling for navigation items */
@@ -26,9 +31,12 @@
 }
 
 .nav-link {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
-    padding: 0.5rem;
+}
+
+.nav-link:hover {
+    color: $base-green-light;
 }
 
 /* Responsive styling */

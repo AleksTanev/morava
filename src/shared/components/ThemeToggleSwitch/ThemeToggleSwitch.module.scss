@@ -1,35 +1,32 @@
 @import '@/styles.scss';
 
 .toggleSwitch {
-  position: relative;
-  width: 60px;
-  height: 30px;
-  border-radius: 15px;
-  border-style: none;    
-  background-color: $base-green-dark;
-  transition: background-color 0.3s ease;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    border-style: none;    
+    background-color: $base-green-dark;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &::before {
-    content: '';
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background-color: $base-green-light;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s ease;
-  }
-
-  &.dark{
 
     &::before {
-      transform: translateX(30px);
+      content: '';
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: $base-green-light;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s ease;
     }
-  }
+
+    &.dark{
+
+      &::before {
+        transform: translateX(30px);
+      }
+    }
 }

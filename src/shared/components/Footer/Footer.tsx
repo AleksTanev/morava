@@ -1,20 +1,20 @@
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import "./Footer.css";
+import styles from "./Footer.module.scss";
 import Logo from "../../../assets/2.png";
 
 const Footer = () => {
   return (
-    <div className="footer-page">
+    <div className={styles["footer-page"]}>
       <Container>
-        <Row className="footer-first">
+        <Row className={styles["footer-first"]}>
           <Col xxl="4" xl="4" lg="4" md="4" sm="12" xs="12">
-            <Link to="/" className="footer-brand">
+            <Link to="/" className={styles["footer-brand"]}>
               <img src={Logo} alt="Morava" />
             </Link>
           </Col>
           <Col xxl="4" xl="4" lg="4" md="4" sm="12" xs="12">
-            <span className="column-title">Contact us</span>
+            <span className={styles["column-title"]}>Contact us</span>
           </Col>
           <Col xxl="4" xl="4" lg="4" md="4" sm="12" xs="12"></Col>
         </Row>
@@ -26,7 +26,7 @@ const Footer = () => {
             md="12"
             sm="12"
             xs="12"
-            className="footer-second"
+            className={styles["footer-second"]}
           >
             Copyright 2024 © Morava | All rights reserved
           </Col>

@@ -2,20 +2,20 @@ import { Navbar, NavbarBrand, NavItem } from "reactstrap";
 import { headerTitles } from "./constants";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../assets/2.png";
-import "./Header.css";
+import styles from "./Header.module.scss";
 import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
 
 const Header = () => {
     return (
-        <Navbar className="main-header">
+        <Navbar className={styles["main-header"]}>
             <NavbarBrand>
-                <Link to="/" className="navbar-brand">
+                <Link to="/" className={styles["navbar-brand"]}>
                     <img src={Logo} alt="logo" />
                 </Link>
             </NavbarBrand>
             {headerTitles.map(({ title, route }) => (
-                <NavItem className="nav-item" key={title} tag={"div"}>
-                    <NavLink to={route} className="nav-link">
+                <NavItem className={styles["nav-item"]} key={title} tag={"div"}>
+                    <NavLink to={route} className={styles["nav-link"]}>
                         {title}
                     </NavLink>
                 </NavItem>

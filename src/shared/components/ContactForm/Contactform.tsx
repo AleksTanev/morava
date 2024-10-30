@@ -1,17 +1,21 @@
 import { Row, Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
-import contacts from "../../components/ContactForm/constants";
+import contacts from "./constants";
+import { Ref } from "react";
 
-const ContactForm = (props: any) => {
-  const formRef = props.formRef;
-  const nameFormError = props.nameFormError;
-  const emailFormError = props.emailFormError;
-  const successMessage = props.successMessage;
-  const emailNotSend = props.emailNotSend;
-  const handleFormSubmit = props.handleFormSubmit;
-  const handleInputChange = props.handleInputChange;
-  const stateFormName = props.stateFormName;
-  const stateFormEmail = props.stateFormEmail;
-  const stateFormMessage = props.stateFormMessage;
+export interface ContactFormProps {
+  formRef: Ref<HTMLFormElement>,
+  nameFormError: string,
+  emailFormError: string,
+  successMessage: string,
+  emailNotSend: string,
+  handleFormSubmit: () => void,
+  handleInputChange: () => void,
+  stateFormName: string,
+  stateFormEmail: string,
+  stateFormMessage: string
+}
+
+const ContactForm = ({formRef, nameFormError, emailFormError, successMessage, emailNotSend, handleFormSubmit, handleInputChange, stateFormName, stateFormEmail, stateFormMessage}: ContactFormProps) => {
 
   return (
     <>

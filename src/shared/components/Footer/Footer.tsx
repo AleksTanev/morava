@@ -5,8 +5,8 @@ import BrandLogo from "../BrandLogo/BrandLogo";
 const Footer = () => {
     return (
         <Container className={styles["footer-container"]}>
-            <Row xxl="3" xl="3" lg="3" md="3" sm="2" xs="1" className={styles["footer-first"]}>
-                <Col>
+            <Row className={styles["footer-first"]}>
+                <Col xxl="4" xl="4" lg="4" md="4" sm="12" xs="12">
                     <div className={styles["footer-brand"]}>
                         <BrandLogo />
                     </div>
@@ -15,8 +15,10 @@ const Footer = () => {
                     <span className={styles["column-title"]}>Contact us</span>
                 </Col>
             </Row>
-            <Row xxl="1" xl="1" lg="1" md="1" sm="1" xs="1" className={styles["footer-second"]}>
-                <Col>Copyright 2024 © Morava | All rights reserved</Col>
+            <Row className={styles["footer-second"]}>
+                <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12">
+                    Copyright 2024 © Morava | All rights reserved
+                </Col>
             </Row>
         </Container>
     );

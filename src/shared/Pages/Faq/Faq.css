@@ -1,0 +1,60 @@
+.faq-page {
+  .accordion-menu {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .right-sidebar {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: left;
+    background-color: var(--background-color);
+    border: 0;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+    border-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    overflow-anchor: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+      border-radius 0.15s ease;
+  }
+
+  .accordion-button:focus {
+    z-index: 3;
+    border-color: var(--base-green);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--base-green);
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: var(--text-color);
+    background-color: var(--base-green);
+  }
+
+  .accordion-body {
+    color: var(--text-color);
+  }
+
+  .accordion-item {
+    background-color: var(--background-color);
+    border-top: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
+
+  .accordion-item-border-bottom {
+    border-bottom: 1px solid var(--text-color);
+  }
+}

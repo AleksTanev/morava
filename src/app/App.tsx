@@ -5,6 +5,7 @@ import Services from "../shared/Pages/Services/Services";
 import Faq from "../shared/Pages/Faq/Faq";
 import Contacts from "../shared/Pages/Contacts/Contacts";
 import Home from "../shared/Pages/Home/Home";
+import PageNotfound from "../shared/Pages/PageNotFound/PageNotFound";
 
 function App() {
     return (
@@ -15,8 +16,9 @@ function App() {
                         <Route index element={<Home />} />
                         <Route path="/about" element={<About aboutText="About text" />} />
                         <Route path="/services" element={<Services servicesText="Services text" />} />
-                        <Route path="/faq" element={<Faq faqText="Faq text" />} />
+                        <Route path="/faq" element={<Faq />} />
                         <Route path="/contact-us" element={<Contacts contactsText="Contacts text" />} />
+                        <Route path="*" element={<PageNotfound />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

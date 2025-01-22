@@ -3,128 +3,98 @@ import emailjs from "@emailjs/browser";
 import { Container, Row, Col } from "reactstrap";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import WorkingHours from "../../components/WorkingHours/WorkingHours";
-import ContactForm from "../../components/ContactForm/ContactForm";
 import constants from "../../components/ContactForm/constants";
+import ContactForm from "../../components/ContactForm/Contactform";
 import "./Contacts.css";
 
-export interface ContactsProps {
-  contactsText: string;
-}
+const Contacts = () => {
+    const form = useRef<HTMLFormElement>(null);
 
-const Contacts = ({ contactsText }: ContactsProps) => {
-  const form = useRef<HTMLFormElement>(null);
+    const [nameFormError, setNameFormError] = useState("");
+    const [emailFormError, setEmailFormError] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
+    const [emailNotSend, setEmailNotSend] = useState("");
 
-  const [nameFormError, setNameFormError] = useState("");
-  const [emailFormError, setEmailFormError] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [emailNotSend, setEmailNotSend] = useState("");
-
-  const [state, setState] = useState({
-    formName: "",
-    formEmail: "",
-    formMessage: "",
-  });
-
-  const isEmailValid = (email: string) => {
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailPattern.test(email);
-  };
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setState({
-      ...state,
-      [event.target.name]: value,
+    const [state, setState] = useState({
+        formName: "",
+        formEmail: "",
+        formMessage: "",
     });
-  };
 
-  const handleFormSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+    const isEmailValid = (email: string) => {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+    };
 
-    if (state.formName.trim().length < 3) {
-      setNameFormError(constants.invalidName);
-    }
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const value = event.target.value;
+        setState({
+            ...state,
+            [event.target.name]: value,
+        });
+    };
 
-    if (state.formName.trim().length > 2) {
-      setNameFormError("");
-    }
+    const handleFormSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
 
-    if (!isEmailValid(state.formEmail.trim())) {
-      setEmailFormError(constants.invalidEmail);
-    }
+        if (state.formName.trim().length < 3) {
+            setNameFormError(constants.invalidName);
+        }
 
-    if (isEmailValid(state.formEmail.trim())) {
-      setEmailFormError("");
-    }
+        if (state.formName.trim().length > 2) {
+            setNameFormError("");
+        }
 
-    if (form.current === null) return;
+        if (!isEmailValid(state.formEmail.trim())) {
+            setEmailFormError(constants.invalidEmail);
+        }
 
-    if (
-      state.formName.trim().length > 2 &&
-      isEmailValid(state.formEmail.trim())
-    ) {
-      emailjs
-        .sendForm(
-          constants.serviceID,
-          constants.templateID,
-          form.current,
-          constants.publicKey
-        )
-        .then(
-          () => {
-            setSuccessMessage(constants.successMessage);
-          },
-          () => {
-            setEmailNotSend(constants.emailNotSend);
-          }
-        );
-    }
-  };
+        if (isEmailValid(state.formEmail.trim())) {
+            setEmailFormError("");
+        }
 
-  return (
-    <>
-      <PageTitle pageTitleText="Contact us" />
-      <div className="contact-page">
-        <Container>
-          <Row>
-            <Col
-              xxl="3"
-              xl="3"
-              lg="3"
-              md="3"
-              sm="12"
-              xs="12"
-              className="left-sidebar"
-            >
-              <WorkingHours />
-            </Col>
-            <Col
-              xxl="9"
-              xl="9"
-              lg="9"
-              md="9"
-              sm="12"
-              xs="12"
-              className="right-sidebar"
-            >
-              <ContactForm
-                formRef={form}
-                nameFormError={nameFormError}
-                emailFormError={emailFormError}
-                successMessage={successMessage}
-                emailNotSend={emailNotSend}
-                handleFormSubmit={handleFormSubmit}
-                handleInputChange={handleInputChange}
-                stateFormName={state.formName}
-                stateFormEmail={state.formEmail}
-                stateFormMessage={state.formMessage}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </>
-  );
+        if (form.current === null) return;
+
+        if (state.formName.trim().length > 2 && isEmailValid(state.formEmail.trim())) {
+            emailjs.sendForm(constants.serviceID, constants.templateID, form.current, constants.publicKey).then(
+                () => {
+                    setSuccessMessage(constants.successMessage);
+                },
+                () => {
+                    setEmailNotSend(constants.emailNotSend);
+                }
+            );
+        }
+    };
+
+    return (
+        <>
+            <PageTitle pageTitleText="Contact us" />
+            <div className="contact-page">
+                <Container>
+                    <Row>
+                        <Col xxl="3" xl="3" lg="3" md="3" sm="12" xs="12" className="left-sidebar">
+                            <WorkingHours />
+                        </Col>
+                        <Col xxl="9" xl="9" lg="9" md="9" sm="12" xs="12" className="right-sidebar">
+                            <ContactForm
+                                formRef={form}
+                                nameFormError={nameFormError}
+                                emailFormError={emailFormError}
+                                successMessage={successMessage}
+                                emailNotSend={emailNotSend}
+                                handleFormSubmit={handleFormSubmit}
+                                handleInputChange={handleInputChange}
+                                stateFormName={state.formName}
+                                stateFormEmail={state.formEmail}
+                                stateFormMessage={state.formMessage}
+                            />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        </>
+    );
 };
 
 export default Contacts;

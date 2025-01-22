@@ -1,6 +1,7 @@
 @import '@/styles.scss';
 
-.container {
+.footer-container {
+  position: relative;
   max-width: 100%;
   margin: 0px;
   padding: 0px;
@@ -27,7 +28,5 @@
 }
 
 .footer-brand {
-  img {
-    height: 50px;
-  }
+  max-height: 2.4rem;
 }

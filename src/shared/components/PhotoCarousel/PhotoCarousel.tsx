@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from "reactstrap";
-import styles from "./PhotoCarousel.module.scss";
 import HomeImage1 from "@/assets/home-images/1.jpg";
 import HomeImage2 from "@/assets/home-images/2.jpg";
 import HomeImage3 from "@/assets/home-images/3.jpg";
@@ -43,14 +42,14 @@ const PhotoCarousel = () => {
 
     const slides = slideItems.map((item) => {
         return (
-            <CarouselItem className={styles["carousel-item"]} onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
-                <img src={item.src} alt={item.altText} className={styles["carousel-img"]} />
+            <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
+                <img src={item.src} alt={item.altText} />
             </CarouselItem>
         );
     });
 
     return (
-        <Carousel className={styles["carousel"]} activeIndex={activeIndex} next={next} previous={previous}>
+        <Carousel activeIndex={activeIndex} next={next} previous={previous}>
             <CarouselIndicators items={slideItems} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
             <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />

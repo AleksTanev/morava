@@ -4,7 +4,7 @@ import BrandLogo from "../BrandLogo/BrandLogo";
 
 const Footer = () => {
     return (
-        <Container>
+        <Container className={styles["footer-container"]}>
             <Row xxl="3" xl="3" lg="3" md="3" sm="2" xs="1" className={styles["footer-first"]}>
                 <Col>
                     <div className={styles["footer-brand"]}>

@@ -1,25 +1,14 @@
 import { useState } from "react";
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from "reactstrap";
-import HomeImage1 from "@/assets/home-images/1.jpg";
-import HomeImage2 from "@/assets/home-images/2.jpg";
-import HomeImage3 from "@/assets/home-images/3.jpg";
 
-const slideItems = [
-    {
-        src: HomeImage1,
-        altText: "Slide 1",
-    },
-    {
-        src: HomeImage2,
-        altText: "Slide 2",
-    },
-    {
-        src: HomeImage3,
-        altText: "Slide 3",
-    },
-];
+interface PhotoCarouselProps {
+    slideItems: {
+        src: string;
+        altText: string;
+    }[];
+}
 
-const PhotoCarousel = () => {
+const PhotoCarousel = ({ slideItems }: PhotoCarouselProps) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 

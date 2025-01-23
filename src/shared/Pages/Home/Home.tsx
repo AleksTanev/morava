@@ -8,17 +8,32 @@ const textBlockItems = [
     {
         heading: "Design",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "https://via.placeholder.com/50", alt: "Design icon" },
+        icon: { url: "./public/misc/secateurs-tool.svg", alt: "Design icon" },
     },
     {
         heading: "Construction",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "https://via.placeholder.com/50", alt: "Construction icon" },
+        icon: { url: "./public/misc/rake-tool.svg", alt: "Construction icon" },
     },
     {
         heading: "Maintenance",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "https://via.placeholder.com/50", alt: "Maintenance icon" },
+        icon: { url: "./public/misc/plant-watering.svg", alt: "Maintenance icon" },
+    },
+];
+
+const slideItems = [
+    {
+        src: "./public/home-images/1.jpg",
+        altText: "Slide 1",
+    },
+    {
+        src: "./public/home-images/2.jpg",
+        altText: "Slide 2",
+    },
+    {
+        src: "./public/home-images/3.jpg",
+        altText: "Slide 3",
     },
 ];
 
@@ -36,7 +51,7 @@ const Home = () => {
                             <h3 className={styles["hero-subtext"]}>and look good doing them 😎</h3>
                         </div>
                     </div>
-                    <PhotoCarousel />
+                    <PhotoCarousel slideItems={slideItems} />
                 </Col>
             </Row>
             <Row>

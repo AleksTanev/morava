@@ -52,7 +52,7 @@
 
     .nav-item {
         margin-left: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
     }
 }
 
@@ -70,5 +70,9 @@
         gap: 1rem;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
     }
 }

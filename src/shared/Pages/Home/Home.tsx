@@ -3,6 +3,7 @@ import PhotoCarousel from "../../components/PhotoCarousel/PhotoCarousel";
 import TextBlock from "../../components/TextBlock/TextBlock";
 import styles from "./Home.module.scss";
 import classNames from "classnames";
+import Projects from "../../components/Projects/Projects";
 
 const textBlockItems = [
     {
@@ -46,6 +47,7 @@ const Home = () => {
                     </Col>
                 ))}
             </Row>
+            <Projects projects={} />
         </Container>
     );
 };

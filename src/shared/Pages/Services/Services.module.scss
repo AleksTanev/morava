@@ -1,0 +1,19 @@
+@import '@/styles.scss';
+
+.services-page {
+    .services-title {
+        font-size: 22px;
+    }
+
+    .service-text {
+        font-size: 17px;
+    }
+
+    .row-padding {
+        padding-bottom: 20px;
+    }
+
+    .col-padding {
+        padding-right: 50px;
+    }
+}

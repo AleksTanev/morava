@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "reactstrap";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Accordion from "../../components/Accordion/Accordion";
-import "./Faq.css";
+import "./Faq.module.scss";
 
 export interface FaqProps {
   faqText: string;

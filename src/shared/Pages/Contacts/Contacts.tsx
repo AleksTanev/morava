@@ -5,7 +5,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import WorkingHours from "../../components/WorkingHours/WorkingHours";
 import constants from "../../components/ContactForm/constants";
 import ContactForm from "../../components/ContactForm/Contactform";
-import "./Contacts.css";
+import "./Contacts.module.scss";
 
 const Contacts = () => {
     const form = useRef<HTMLFormElement>(null);

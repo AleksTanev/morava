@@ -8,7 +8,7 @@ const Services = () => {
       <PageTitle pageTitleText="Services" />
       <Container>
         <Row className={styles["row-padding"]}>
-          <Col xxl="3" xl="3" lg="3" md="12" sm="12" xs="12" className={styles["col-padding"]}>
+          <Col xxl="4" xl="4" lg="4" md="12" sm="12" xs="12" className={styles["col-padding"]}>
             <span className={styles["services-title"]}>Service 1</span>
             <br />
             <span className={styles["services-text"]}>
@@ -24,7 +24,7 @@ const Services = () => {
               Lorem Ipsum.
             </span>
           </Col>
-          <Col xxl="3" xl="3" lg="3" md="12" sm="12" xs="12" className={styles["col-padding"]}>
+          <Col xxl="4" xl="4" lg="4" md="12" sm="12" xs="12" className={styles["col-padding"]}>
             <span className={styles["services-title"]}>Service 2</span>
             <br />
             <span className={styles["services-text"]}>
@@ -40,7 +40,7 @@ const Services = () => {
               Lorem Ipsum.
             </span>
           </Col>
-          <Col xxl="3" xl="3" lg="3" md="12" sm="12" xs="12">
+          <Col xxl="4" xl="4" lg="4" md="12" sm="12" xs="12">
             <span className={styles["services-title"]}>Service 3</span>
             <br />
             <span className={styles["services-text"]}>
@@ -59,7 +59,7 @@ const Services = () => {
         </Row>
 
         <Row className={styles["row-padding"]}>
-          <Col xxl="3" xl="3" lg="3" md="12" sm="12" xs="12" className={styles["col-padding"]}>
+          <Col xxl="4" xl="4" lg="4" md="12" sm="12" xs="12" className={styles["col-padding"]}>
             <span className={styles["services-title"]}>Service 4</span>
             <br />
             <span className={styles["services-text"]}>
@@ -75,7 +75,7 @@ const Services = () => {
               Lorem Ipsum.
             </span>
           </Col>
-          <Col xxl="3" xl="3" lg="3" md="12" sm="12" xs="12" className={styles["col-padding"]}>
+          <Col xxl="4" xl="4" lg="4" md="12" sm="12" xs="12" className={styles["col-padding"]}>
             <span className={styles["services-title"]}>Service 5</span>
             <br />
             <span className={styles["services-text"]}>
@@ -92,9 +92,9 @@ const Services = () => {
             </span>
           </Col>
           <Col
-            xxl="3"
-            xl="3"
-            lg="3"
+            xxl="4"
+            xl="4"
+            lg="4"
             md="12"
             sm="12"
             xs="12"

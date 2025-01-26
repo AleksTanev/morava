@@ -5,7 +5,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import WorkingHours from "../../components/WorkingHours/WorkingHours";
 import constants from "../../components/ContactForm/constants";
 import ContactForm from "../../components/ContactForm/Contactform";
-import "./Contacts.module.scss";
+import styles from "./Contacts.module.scss";
 
 const Contacts = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -70,13 +70,13 @@ const Contacts = () => {
     return (
         <>
             <PageTitle pageTitleText="Contact us" />
-            <div className="contact-page">
+            <div className={styles["contact-page"]}>
                 <Container>
                     <Row>
-                        <Col xxl="3" xl="3" lg="3" md="3" sm="12" xs="12" className="left-sidebar">
+                        <Col xxl="3" xl="3" lg="3" md="3" sm="12" xs="12" className={styles["left-sidebar"]}>
                             <WorkingHours />
                         </Col>
-                        <Col xxl="9" xl="9" lg="9" md="9" sm="12" xs="12" className="right-sidebar">
+                        <Col xxl="9" xl="9" lg="9" md="9" sm="12" xs="12" className={styles["right-sidebar"]}>
                             <ContactForm
                                 formRef={form}
                                 nameFormError={nameFormError}

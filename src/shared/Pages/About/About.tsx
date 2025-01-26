@@ -8,8 +8,8 @@ const About = () => {
       <PageTitle pageTitleText="About" />
       <Container>
         <Row>
-          <Col xxl="6" xl="6" lg="6" md="6" sm="12" xs="12" className={styles["col-padding"]}>
-            <span className="about-text">
+          <Col xxl="6" xl="6" lg="6" md="12" sm="12" xs="12" className={styles["col-padding"]}>
+            <span className={styles["about-text"]}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -22,7 +22,7 @@ const About = () => {
               Lorem Ipsum.
             </span>
           </Col>
-          <Col xxl="6" xl="6" lg="6" md="6" sm="12" xs="12">
+          <Col xxl="6" xl="6" lg="6" md="12" sm="12" xs="12">
             Picture
           </Col>
         </Row>

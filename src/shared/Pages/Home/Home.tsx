@@ -3,6 +3,7 @@ import PhotoCarousel from "../../components/PhotoCarousel/PhotoCarousel";
 import TextBlock from "../../components/TextBlock/TextBlock";
 import styles from "./Home.module.scss";
 import classNames from "classnames";
+import Projects, { Project } from "../../components/Projects/Projects";
 
 const textBlockItems = [
     {
@@ -37,6 +38,29 @@ const slideItems = [
     },
 ];
 
+const projects: Project[] = [
+    {
+        title: "Project 1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        imgUrl: "./public/projects/project1.jpg",
+    },
+    {
+        title: "Project 2",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        imgUrl: "./public/projects/project2.jpg",
+    },
+    {
+        title: "Project 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        imgUrl: "./public/projects/project3.jpg",
+    },
+    {
+        title: "Project 4",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        imgUrl: "./public/projects/project4.jpg",
+    },
+];
+
 const Home = () => {
     return (
         <Container className={styles["no-padding"]}>
@@ -61,6 +85,7 @@ const Home = () => {
                     </Col>
                 ))}
             </Row>
+            <Projects projects={projects} />
         </Container>
     );
 };

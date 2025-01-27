@@ -1,21 +1,10 @@
-.contact-page {
-  .left-sidebar {
-    padding: 20px 20px 20px 20px;
-  }
+@import '@/styles.scss';
 
-  .right-sidebar {
-    padding: 20px 20px 20px 20px;
-  }
-
-  .error-message {
-    color: var(--text-color);
-    padding-bottom: 20px;
-  }
-
-  .input-form {
-    border: 1px solid var(--text-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
+.page-not-found {
+  .page-not-found-text {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 20px;
   }
 
   .button-text {

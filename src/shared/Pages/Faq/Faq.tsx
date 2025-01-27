@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "reactstrap";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Accordion from "../../components/Accordion/Accordion";
-import "./Faq.css";
+import styles from "./Faq.module.scss";
 
 export interface FaqProps {
   faqText: string;
@@ -11,9 +11,9 @@ const Faq = () => {
   return (
     <>
       <PageTitle pageTitleText="FAQ" />
-      <div className="faq-page">
+      <div className={styles["faq-page"]}>
         <Container>
-          <Row className="footer-first">
+          <Row className={styles["footer-first"]}>
             <Col
               xxl="9"
               xl="9"
@@ -21,7 +21,7 @@ const Faq = () => {
               md="9"
               sm="12"
               xs="12"
-              className="accordion-menu"
+              className={styles["accordion-menu"]}
             >
               <Accordion />
             </Col>
@@ -32,9 +32,9 @@ const Faq = () => {
               md="3"
               sm="12"
               xs="12"
-              className="right-sidebar"
+              className={styles["right-sidebar"]}
             >
-              <span className="column-title">
+              <span className={styles["fac-text"]}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

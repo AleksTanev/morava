@@ -8,17 +8,17 @@ const textBlockItems = [
     {
         heading: "Design",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "./public/misc/secateurs-tool.svg", alt: "Design icon" },
+        icon: { url: "./public/misc/3.svg", urlBlack: "./public/misc/3-black.svg", alt: "Design icon" },
     },
     {
         heading: "Construction",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "./public/misc/rake-tool.svg", alt: "Construction icon" },
+        icon: { url: "./public/misc/2.svg", urlBlack: "./public/misc/2-black.svg", alt: "Construction icon" },
     },
     {
         heading: "Maintenance",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "./public/misc/plant-watering.svg", alt: "Maintenance icon" },
+        icon: { url: "./public/misc/1.svg", urlBlack: "./public/misc/1-black.svg", alt: "Maintenance icon" },
     },
 ];
 

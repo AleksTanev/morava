@@ -28,6 +28,7 @@ const headerTitles = [
 ];
 
 const Header = () => {
+
     return (
         <Navbar className={styles["main-header"]}>
             <div className={styles["navbar-brand-container"]}>
@@ -36,7 +37,7 @@ const Header = () => {
             <div className={styles["nav-item-container"]}>
                 {headerTitles.map(({ title, route }) => (
                     <NavItem className={styles["nav-item"]} key={title} tag={"div"}>
-                        <NavLink to={route} className={styles["nav-link"]}>
+                        <NavLink to={route} className={styles["nav-link"]} onClick={console.log}>
                             {title}
                         </NavLink>
                     </NavItem>

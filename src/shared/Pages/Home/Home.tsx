@@ -67,12 +67,10 @@ const Home = () => {
         <Container className={styles["no-padding"]}>
             <Row className={styles["no-padding"]}>
                 <Col className={classNames(styles["carousel-container"], styles["no-padding"], "w-100")}>
+                    <div className={styles["blur-bg"]} />
                     <div className={styles["hero-text-wrapper"]}>
-                        <div className={styles["blur-bg"]}></div>
                         <div className={styles["hero-text-content"]}>
-                            <h1 className={styles["hero-text"]}>
-                                We make damn <span className="highlight">good gardens</span>
-                            </h1>
+                            <h1 className={styles["hero-text"]}>We make damn good gardens</h1>
                             <h3 className={styles["hero-subtext"]}>and look good doing them 😎</h3>
                         </div>
                     </div>
@@ -86,7 +84,7 @@ const Home = () => {
                     </Col>
                 ))}
             </Row>
-            <Row className={classNames(styles["home-section-container"], "mt-50")}>
+            <Row className={classNames(styles["home-section-container"], "mt-0")}>
                 <Col xl="12" xs="12" xxl="12" md="12" lg="12" sm="12">
                     <h1 className={styles["section-heading"]}>Our Projects</h1>
                 </Col>

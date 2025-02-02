@@ -1,4 +1,4 @@
-import { Col, Row } from "reactstrap";
+import { Col } from "reactstrap";
 
 interface ProjectsProps {
     projects: Project[];
@@ -13,16 +13,13 @@ export interface Project {
 const Projects = ({ projects }: ProjectsProps) => {
     return (
         <>
-            <Row>
-                <h3>Some of our projects</h3>
-                {projects.map((project, index) => (
-                    <Col key={index} xl={3} sm={3} xxl={3} md={3} lg={3} xs={3}>
-                        <img src={project.imgUrl} alt={project.title} />
-                        <h4>{project.title}</h4>
-                        <p>{project.description}</p>
-                    </Col>
-                ))}
-            </Row>
+            {projects.map((project, index) => (
+                <Col key={index} xl={3} sm={3} xxl={3} md={3} lg={3} xs={3}>
+                    <img src={project.imgUrl} alt={project.title} />
+                    <h4>{project.title}</h4>
+                    <p>{project.description}</p>
+                </Col>
+            ))}
         </>
     );
 };

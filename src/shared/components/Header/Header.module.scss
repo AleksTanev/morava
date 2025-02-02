@@ -36,6 +36,12 @@
     text-decoration: none;
 }
 
+.nav-item {
+    &.active {
+        color: $base-green-light;
+    }
+}
+
 .nav-link:hover {
     color: $base-green-light;
 }

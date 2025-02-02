@@ -8,18 +8,19 @@ import Projects, { Project } from "../../components/Projects/Projects";
 const textBlockItems = [
     {
         heading: "Design",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor ",
         icon: { url: "./public/misc/3.svg", urlBlack: "./public/misc/3-black.svg", alt: "Design icon" },
     },
+
     {
         heading: "Construction",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "./public/misc/2.svg", urlBlack: "./public/misc/2-black.svg", alt: "Construction icon" },
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+        icon: { url: "./public/misc/1.svg", urlBlack: "./public/misc/1-black.svg", alt: "Maintenance icon" },
     },
     {
         heading: "Maintenance",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        icon: { url: "./public/misc/1.svg", urlBlack: "./public/misc/1-black.svg", alt: "Maintenance icon" },
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing ",
+        icon: { url: "./public/misc/2.svg", urlBlack: "./public/misc/2-black.svg", alt: "Construction icon" },
     },
 ];
 
@@ -78,14 +79,21 @@ const Home = () => {
                     <PhotoCarousel slideItems={slideItems} />
                 </Col>
             </Row>
-            <Row>
+            <Row className={styles["home-section-container"]}>
                 {textBlockItems.map((item, index) => (
-                    <Col key={index} xl="4" xs="4" xxl="4" md="4" lg="4">
+                    <Col key={index} xl="4" xs="4" xxl="4" md="4" lg="4" sm="4">
                         <TextBlock heading={item.heading} text={item.text} icon={item.icon} />
                     </Col>
                 ))}
             </Row>
-            <Projects projects={projects} />
+            <Row className={classNames(styles["home-section-container"], "mt-50")}>
+                <Col xl="12" xs="12" xxl="12" md="12" lg="12" sm="12">
+                    <h1 className={styles["section-heading"]}>Our Projects</h1>
+                </Col>
+            </Row>
+            <Row className={classNames(styles["home-section-container"], "mx-5")}>
+                <Projects projects={projects} />
+            </Row>
         </Container>
     );
 };

@@ -1,10 +1,9 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Container, Row, Col } from "reactstrap";
-import PageTitle from "../../components/PageTitle/PageTitle";
 import WorkingHours from "../../components/WorkingHours/WorkingHours";
 import constants from "../../components/ContactForm/constants";
-import ContactForm from "../../components/ContactForm/Contactform";
+import ContactForm from "../../components/ContactForm/ContactForm";
 import styles from "./Contacts.module.scss";
 
 const Contacts = () => {
@@ -68,32 +67,27 @@ const Contacts = () => {
     };
 
     return (
-        <>
-            <PageTitle pageTitleText="Contact us" />
-            <div className={styles["contact-page"]}>
-                <Container>
-                    <Row>
-                        <Col xxl="3" xl="3" lg="3" md="3" sm="12" xs="12" className={styles["left-sidebar"]}>
-                            <WorkingHours />
-                        </Col>
-                        <Col xxl="9" xl="9" lg="9" md="9" sm="12" xs="12" className={styles["right-sidebar"]}>
-                            <ContactForm
-                                formRef={form}
-                                nameFormError={nameFormError}
-                                emailFormError={emailFormError}
-                                successMessage={successMessage}
-                                emailNotSend={emailNotSend}
-                                handleFormSubmit={handleFormSubmit}
-                                handleInputChange={handleInputChange}
-                                stateFormName={state.formName}
-                                stateFormEmail={state.formEmail}
-                                stateFormMessage={state.formMessage}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-        </>
+        <Container className={styles["contact-page"]}>
+            <Row>
+                <Col xxl="3" xl="3" lg="3" md="3" sm="12" xs="12" className={styles["left-sidebar"]}>
+                    <WorkingHours />
+                </Col>
+                <Col xxl="9" xl="9" lg="9" md="9" sm="12" xs="12" className={styles["right-sidebar"]}>
+                    <ContactForm
+                        formRef={form}
+                        nameFormError={nameFormError}
+                        emailFormError={emailFormError}
+                        successMessage={successMessage}
+                        emailNotSend={emailNotSend}
+                        handleFormSubmit={handleFormSubmit}
+                        handleInputChange={handleInputChange}
+                        stateFormName={state.formName}
+                        stateFormEmail={state.formEmail}
+                        stateFormMessage={state.formMessage}
+                    />
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

@@ -1,6 +1,10 @@
 @import '@/styles.scss';
 
 .page-not-found {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+
   .page-not-found-text {
     text-align: center;
     font-size: 24px;
@@ -12,40 +16,12 @@
     padding-top: 20px;
   }
 
-  .btn-success:hover {
-    color: #fff;
-    background-color: var(--base-green-light);
-    border-color: #146c43;
-  }
-
-  .btn-success {
-    color: #fff;
-    background-color: var(--base-green-dark);
-    border-color: #198754;
-  }
-
   .btn {
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: var(--base-green-dark);
-    border: 1px solid var(--base-green-dark);
-    border-top-color: var(--base-green-dark);
-    border-right-color: var(--base-green-dark);
-    border-bottom-color: var(--base-green-dark);
-    border-left-color: var(--base-green-dark);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: var(--btn-primary);
+    border: none;
+  }
+
+  .success-btn:hover {
+    background-color: var(--base-green-light);
   }
 }

@@ -5,16 +5,11 @@ import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
 const headerTitles = [
-    {
-        title: "About",
-        isCollapsible: false,
-        route: "/about",
-    },
-    {
-        title: "Services",
-        isCollapsible: true,
-        route: "/services",
-    },
+    // {
+    //     title: "Services",
+    //     isCollapsible: true,
+    //     route: "/services",
+    // },
     {
         title: "FAQ",
         isCollapsible: false,

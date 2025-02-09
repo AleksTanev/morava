@@ -10,24 +10,20 @@ const PageNotfound = () => {
   };
 
   return (
-    <div className={styles["page-not-found"]}>
-      <Container>
-        <Row xxl="1" xl="1" lg="1" md="1" sm="1" xs="1">
-          <Col className={styles["page-not-found-text"]}>Page Not Found</Col>
-        </Row>
-        <Row xxl="1" xl="1" lg="1" md="1" sm="1" xs="1">
-          <Col className={styles["button-text"]}>
-            <Button
-              onClick={gotToHomePage}
-              className={styles["button-display button-color"]}
-              color="success"
-            >
-              Go to Home Page
-            </Button>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+      <div className={styles["page-not-found"]}>
+          <Container>
+              <Row xxl="1" xl="1" lg="1" md="1" sm="1" xs="1">
+                  <Col className={styles["page-not-found-text"]}>Page Not Found :(</Col>
+              </Row>
+              <Row xxl="1" xl="1" lg="1" md="1" sm="1" xs="1">
+                  <Col className={styles["button-text"]}>
+                      <Button onClick={gotToHomePage} className={styles["btn"]}>
+                          Go to Home Page
+                      </Button>
+                  </Col>
+              </Row>
+          </Container>
+      </div>
   );
 };
 

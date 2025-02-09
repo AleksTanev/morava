@@ -23,7 +23,7 @@ const accordionData = [
 
 const Accordion = () => {
     return (
-        <UncontrolledAccordion className={styles["accordion-container"]} toggle={console.log} defaultOpen={["0"]} stayOpen>
+        <UncontrolledAccordion className={styles["accordion-container"]} toggle={console.log} stayOpen>
             {accordionData.map((item, index) => (
                 <AccordionItem className={styles["accordion-item"]} key={index}>
                     <AccordionHeader targetId={index.toString()}>{item.header}</AccordionHeader>

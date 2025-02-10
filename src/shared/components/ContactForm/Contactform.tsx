@@ -32,32 +32,32 @@ const ContactForm = ({
         <>
             {nameFormError && (
                 <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className="error-message">
-                        <div className="p-3 bg-danger my-2 rounded">{nameFormError}</div>
+                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["error-message"]}>
+                        <div className="p-3 my-2 rounded">{nameFormError}</div>
                     </Col>
                 </Row>
             )}
 
             {emailFormError && (
                 <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className="error-message">
-                        <div className="p-3 bg-danger my-2 rounded">{emailFormError}</div>
+                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["error-message"]}>
+                        <div className="p-3 my-2 rounded">{emailFormError}</div>
                     </Col>
                 </Row>
             )}
 
             {emailNotSend && (
                 <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className="error-message">
-                        <div className="p-3 bg-danger my-2 rounded">{emailNotSend}</div>
+                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["error-message"]}>
+                        <div className="p-3 my-2 rounded">{emailNotSend}</div>
                     </Col>
                 </Row>
             )}
 
             {successMessage && (
                 <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className="error-message">
-                        <div className="p-3 bg-success my-2 rounded">{successMessage}</div>
+                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["success-message"]}>
+                        <div className="p-3 my-2 rounded">{successMessage}</div>
                     </Col>
                 </Row>
             )}

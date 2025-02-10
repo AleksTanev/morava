@@ -1,3 +1,5 @@
+@import "@/styles.scss";
+
 .no-padding {
     margin: 0 !important;
     padding: 0 !important;
@@ -8,7 +10,6 @@
 .carousel-container {
     width: 100%;
     height: calc(100vh - 90px);
-
 }
 
 .blur-bg {
@@ -21,7 +22,6 @@
     z-index: 101;
 }
 
-
 .hero-text-wrapper {
     position: absolute;
     top: 14%;  
@@ -31,8 +31,6 @@
     max-width: fit-content;
     max-height: fit-content;
 }
-
-
 
 .hero-text-content {
     position: relative;
@@ -56,12 +54,26 @@
 }
 
 .home-section-container {
-    margin-top: 2rem;
+    margin-top: 10rem;
 }
 
 .section-heading {
-    font-size: 2rem;
     font-weight: 700;
-    color: #47592D;
+    color: $base-green;
     text-align: center;
+    margin: 0 40px;
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right:auto;
 }

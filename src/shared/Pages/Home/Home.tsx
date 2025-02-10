@@ -4,6 +4,7 @@ import TextBlock from "../../components/TextBlock/TextBlock";
 import styles from "./Home.module.scss";
 import classNames from "classnames";
 import Projects, { Project } from "../../components/Projects/Projects";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const textBlockItems = [
     {
@@ -43,22 +44,22 @@ const projects: Project[] = [
     {
         title: "Project 1",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project1.jpg",
+        imgUrl: "./public/projects/project1.jpeg",
     },
     {
         title: "Project 2",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project2.jpg",
+        imgUrl: "./public/projects/project2.avif",
     },
     {
         title: "Project 3",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project3.jpg",
+        imgUrl: "./public/projects/project3.avif",
     },
     {
         title: "Project 4",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project4.jpg",
+        imgUrl: "./public/projects/project4.avif",
     },
 ];
 
@@ -84,13 +85,19 @@ const Home = () => {
                     </Col>
                 ))}
             </Row>
-            <Row className={classNames(styles["home-section-container"], "mt-0")}>
-                <Col xl="12" xs="12" xxl="12" md="12" lg="12" sm="12">
+            <Row className={classNames(styles["home-section-container"], "mx-4")}>
+                <Col xl="12" xs="12" xxl="12" md="12" lg="12" sm="12" className="mb-5 pb-5">
                     <h1 className={styles["section-heading"]}>Our Projects</h1>
                 </Col>
-            </Row>
-            <Row className={classNames(styles["home-section-container"], "mx-5")}>
                 <Projects projects={projects} />
+            </Row>
+            <Row className={classNames(styles["home-section-container"], styles["contact-form-container"])}>
+                <Col xl="12" xs="12" xxl="12" md="12" lg="12" sm="12" className="mb-5 pb-5">
+                    <h3 className={styles["section-heading"]}>
+                        Like what you see? <br /> Let's get in touch!
+                    </h3>
+                </Col>
+                <ContactForm />
             </Row>
         </Container>
     );

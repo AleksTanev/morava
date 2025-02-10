@@ -1,0 +1,21 @@
+@import "@/styles.scss";
+
+.project-subheader {
+    color: $base-green-light;
+}
+
+.project-img-container {
+    border-radius: 15px;
+    height: 180px;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}

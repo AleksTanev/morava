@@ -1,3 +1,19 @@
+@import "@/styles.scss";
+
 .submit-btn {
     background-color: var(--btn-primary);
+
+    &:hover {
+        background-color: $base-green-dark;
+    }
+}
+
+.success-message {
+    background: var(--success-green);
+    color: var(--text-color);
+}
+
+.error-message {
+    background: var(--error-bg);
+    color: var(--text-color);
 }

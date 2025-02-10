@@ -9,8 +9,9 @@ $base-green-light: #A3BF3F;
   --accordion-bg-expanded: #A3BF3F;
   --accordion-item-bg-color: #f6f6f6;
   --btn-primary:#85A63F;
+  --success-green: #85A63F;
+  --error-bg: rgba(241, 116, 116, 0.899);
   line-height: 1.5;
-  font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -22,6 +23,7 @@ $base-green-light: #A3BF3F;
   }
 
 body {
+    font-family: "Raleway", sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }

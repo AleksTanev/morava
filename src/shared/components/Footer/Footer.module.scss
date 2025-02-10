@@ -1,36 +1,16 @@
 @import '@/styles.scss';
 
 .footer-container {
+  background-color: $base-green-dark;
   position: relative;
   max-width: 100%;
-  margin: 30px 0 0 0;
-  padding: 0px;
-}
-
-.footer-first {
-  margin: 0px;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  padding: 20px;
-  border-top-width: 1px; 
-  border-top-style: solid;
-  border-color: $base-green-dark;
-  
+  margin-top: 80px;
 }
 
 .footer-second {
   margin: 0px;
   color: white;
-  background-color: $base-green-dark;
   text-align: center;
   padding: 10px 0px;
   border-top: 1px solid #4b4c4d;
-}
-
-.column-title {
-  font-size: 24px;
-}
-
-.footer-brand {
-  max-height: 2.4rem;
 }

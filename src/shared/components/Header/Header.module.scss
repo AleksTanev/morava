@@ -11,7 +11,7 @@
     top:0;
     width: 100%;
     padding-bottom: 1rem;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 @media (min-width: 653px) {
@@ -34,16 +34,13 @@
 .nav-link {
     color: var(--text-color);
     text-decoration: none;
-}
-
-.nav-item {
     &.active {
         color: $base-green-light;
     }
-}
 
-.nav-link:hover {
-    color: $base-green-light;
+    &:hover {
+        color: $base-green-light;
+    }
 }
 
 @media (max-width: 768px) {

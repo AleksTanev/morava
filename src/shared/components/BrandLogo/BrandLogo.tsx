@@ -6,15 +6,16 @@ import brandLogoDark from "@/assets/logos/Morava-logo-white.svg";
 
 export interface BrandLogoProps {
     to?: string;
+    handleLogoClick?: () => void;
 }
 
-const BrandLogo = ({ to = "/" }) => {
+const BrandLogo = ({ to = "/", handleLogoClick }: BrandLogoProps) => {
     const { theme } = useContext(ThemeContext);
 
     const logo = theme === "light" ? brandLogoLight : brandLogoDark;
 
     return (
-        <Link to={to}>
+        <Link to={to} onClick={handleLogoClick}>
             <img src={logo} alt="Brand logo" />
         </Link>
     );

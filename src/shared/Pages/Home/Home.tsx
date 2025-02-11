@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "reactstrap";
 import PhotoCarousel from "../../components/PhotoCarousel/PhotoCarousel";
-import TextBlock from "../../components/TextBlock/TextBlock";
+import TextBlockSection from "../../components/TextBlock/TextBlockSection";
 import styles from "./Home.module.scss";
 import classNames from "classnames";
 import Projects, { Project } from "../../components/Projects/Projects";
@@ -79,11 +79,7 @@ const Home = () => {
                 </Col>
             </Row>
             <Row className={styles["home-section-container"]}>
-                {textBlockItems.map((item, index) => (
-                    <Col key={index} xl="4" xs="4" xxl="4" md="4" lg="4" sm="4">
-                        <TextBlock heading={item.heading} text={item.text} icon={item.icon} />
-                    </Col>
-                ))}
+                <TextBlockSection textBlockItems={textBlockItems} />
             </Row>
             <Row className={classNames(styles["home-section-container"], "mx-4")}>
                 <Col xl="12" xs="12" xxl="12" md="12" lg="12" sm="12" className="mb-5 pb-5">

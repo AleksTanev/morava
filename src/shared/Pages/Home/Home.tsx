@@ -4,7 +4,7 @@ import TextBlockSection from "../../components/TextBlock/TextBlockSection";
 import styles from "./Home.module.scss";
 import classNames from "classnames";
 import Projects, { Project } from "../../components/Projects/Projects";
-import ContactForm from "../../components/ContactForm/ContactForm";
+import ContactFormWrapper from "../../components/ContactFormWrapper/ContactFormWrapper";
 
 const textBlockItems = [
     {
@@ -93,7 +93,7 @@ const Home = () => {
                         Like what you see? <br /> Let's get in touch!
                     </h3>
                 </Col>
-                <ContactForm />
+                <ContactFormWrapper />
             </Row>
         </Container>
     );

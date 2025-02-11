@@ -2,6 +2,7 @@ import { Row, Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
 import contacts from "./constants";
 import { FormEvent, Ref } from "react";
 import styles from "./ContactForm.module.scss";
+import classNames from "classnames";
 
 export interface ContactFormProps {
     formRef: Ref<HTMLFormElement>;
@@ -31,35 +32,27 @@ const ContactForm = ({
     return (
         <>
             {nameFormError && (
-                <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["error-message"]}>
-                        <div className="p-3 my-2 rounded">{nameFormError}</div>
-                    </Col>
-                </Row>
+                <div className={classNames(styles["message-container"], styles["error"])}>
+                        {nameFormError}
+                </div>
             )}
 
             {emailFormError && (
-                <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["error-message"]}>
-                        <div className="p-3 my-2 rounded">{emailFormError}</div>
-                    </Col>
-                </Row>
+                <div className={classNames(styles["message-container"], styles["error"])}>
+                        {emailFormError}
+                </div>
             )}
 
             {emailNotSend && (
-                <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["error-message"]}>
-                        <div className="p-3 my-2 rounded">{emailNotSend}</div>
-                    </Col>
-                </Row>
+                <div className={classNames(styles["message-container"], styles["error"])}>
+                        {emailNotSend}
+                </div>
             )}
 
             {successMessage && (
-                <Row>
-                    <Col xxl="12" xl="12" lg="12" md="12" sm="12" xs="12" className={styles["success-message"]}>
-                        <div className="p-3 my-2 rounded">{successMessage}</div>
-                    </Col>
-                </Row>
+                <div className={classNames(styles["message-container"], styles["success"])}>
+                        {successMessage}
+                </div>
             )}
             <Form onSubmit={handleFormSubmit} innerRef={formRef}>
                 <Input id="toName" name="toName" value={contacts.toName} type="hidden" />

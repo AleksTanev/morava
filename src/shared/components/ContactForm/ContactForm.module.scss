@@ -8,12 +8,23 @@
     }
 }
 
-.success-message {
-    background: var(--success-green);
-    color: var(--text-color);
-}
+.message-container {
+    max-height: 50px;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    
+    &.success {
+        background: var(--success-green);
+        color: var(--text-color);
+    }
+    
+    &.error {
+        background: var(--error-bg);
+        color: var(--text-color);
+    }
 
-.error-message {
-    background: var(--error-bg);
-    color: var(--text-color);
 }

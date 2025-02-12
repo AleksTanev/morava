@@ -1,7 +1,7 @@
 import { Row, Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
-import contacts from "./constants";
 import { FormEvent, Ref } from "react";
-import styles from "./ContactForm.module.scss";
+import contacts from "@/shared/components/ContactForm/constants";
+import styles from "@/shared/components/ContactForm/ContactForm.module.scss";
 import classNames from "classnames";
 
 export interface ContactFormProps {

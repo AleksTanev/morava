@@ -1,8 +1,7 @@
 import { Container, Row, Col } from "reactstrap";
-import WorkingHours from "../../components/WorkingHours/WorkingHours";
-
-import styles from "./Contacts.module.scss";
-import ContactFormWrapper from "../../components/ContactFormWrapper/ContactFormWrapper";
+import WorkingHours from "@/shared/components/WorkingHours/WorkingHours";
+import styles from "@/shared/Pages/Contacts/Contacts.module.scss";
+import ContactFormWrapper from "@/shared/components/ContactFormWrapper/ContactFormWrapper";
 
 const Contacts = () => {
     return (

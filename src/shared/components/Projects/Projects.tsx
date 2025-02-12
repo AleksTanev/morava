@@ -1,5 +1,5 @@
 import { Col } from "reactstrap";
-import styles from "./Projects.module.scss";
+import styles from "@/shared/components/Projects/Projects.module.scss";
 
 interface ProjectsProps {
     projects: Project[];

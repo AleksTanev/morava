@@ -1,10 +1,10 @@
 import { Col, Container, Row } from "reactstrap";
-import PhotoCarousel from "../../components/PhotoCarousel/PhotoCarousel";
-import TextBlockSection from "../../components/TextBlock/TextBlockSection";
-import styles from "./Home.module.scss";
+import PhotoCarousel from "@/shared/components/PhotoCarousel/PhotoCarousel";
+import TextBlockSection from "@/shared/components/TextBlockSection/TextBlockSection";
+import styles from "@/shared/Pages/Home/Home.module.scss";
+import Projects, { Project } from "@/shared/components/Projects/Projects";
+import ContactFormWrapper from "@/shared/components/ContactFormWrapper/ContactFormWrapper";
 import classNames from "classnames";
-import Projects, { Project } from "../../components/Projects/Projects";
-import ContactFormWrapper from "../../components/ContactFormWrapper/ContactFormWrapper";
 
 const textBlockItems = [
     {

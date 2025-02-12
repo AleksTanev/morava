@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "reactstrap";
-import "./PageTitle.css";
+import "@/shared/components/PageTitle.css";
 
 export interface PageTitleProps {
   pageTitleText: string;

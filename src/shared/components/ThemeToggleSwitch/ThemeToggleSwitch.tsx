@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
-import { ThemeContext } from "../../contexts/ThemeProvider";
-import styles from "./ThemeToggleSwitch.module.scss";
+import { ThemeContext } from "@/shared/contexts/ThemeProvider";
+import styles from "@/shared/components/ThemeToggleSwitch/ThemeToggleSwitch.module.scss";
 import classNames from "classnames";
 
 const ThemeToggleSwitch = () => {

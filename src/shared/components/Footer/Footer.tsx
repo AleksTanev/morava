@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "reactstrap";
-import styles from "./Footer.module.scss";
+import styles from "@/shared/components/Footer/Footer.module.scss";
 
 const Footer = () => {
     return (

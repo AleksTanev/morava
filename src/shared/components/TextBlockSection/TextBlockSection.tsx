@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import styles from "./TextBlockSection.module.scss";
-import { ThemeContext } from "../../contexts/ThemeProvider";
+import styles from "@/shared/components/TextBlockSection/TextBlockSection.module.scss";
+import { ThemeContext } from "@/shared/contexts/ThemeProvider";
 import { Col, Row } from "reactstrap";
 
 interface TextBlockSectionProps {

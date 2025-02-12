@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import ContactForm from "../ContactForm/ContactForm";
-import constants from "../ContactForm/constants";
+import ContactForm from "@/shared/components/ContactForm/ContactForm";
+import constants from "@/shared/components/ContactForm/constants";
 import emailjs from "@emailjs/browser";
 
 const ContactFormWrapper = () => {

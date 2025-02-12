@@ -71,8 +71,8 @@ const Home = () => {
                     <div className={styles["blur-bg"]} />
                     <div className={styles["hero-text-wrapper"]}>
                         <div className={styles["hero-text-content"]}>
-                            <h1 className={styles["hero-text"]}>We design and build damn good gardens</h1>
-                            <h3 className={styles["hero-subtext"]}>and look good while we are at it.</h3>
+                            <h1 className={styles["hero-text"]}>We build damn good gardens</h1>
+                            <h3 className={styles["hero-subtext"]}>and look good doing it.</h3>
                         </div>
                     </div>
                     <PhotoCarousel slideItems={slideItems} />

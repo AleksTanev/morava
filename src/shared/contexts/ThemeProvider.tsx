@@ -2,9 +2,7 @@ import { createContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext<{ theme: string; toggleTheme?: () => void }>({ theme: "light" });
 
-export interface ThemeProviderProps {
-    children: JSX.Element;
-}
+export interface ThemeProviderProps extends React.PropsWithChildren<object> {}
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const [theme, setTheme] = useState("light");

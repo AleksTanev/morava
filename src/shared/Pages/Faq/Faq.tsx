@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap";
-import Accordion from "../../components/Accordion/Accordion";
-import styles from "./Faq.module.scss";
+import Accordion from "@/shared/components/Accordion/Accordion";
+import styles from "@/shared/Pages/Faq/Faq.module.scss";
 
 const Faq = () => {
     return (

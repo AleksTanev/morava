@@ -4,7 +4,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "reactstrap";
-import styles from "./Accordion.module.scss";
+import styles from "@/shared/components/Accordion/Accordion.module.scss";
 
 const accordionData = [
     {

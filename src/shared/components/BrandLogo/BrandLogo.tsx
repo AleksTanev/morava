@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "../../contexts/ThemeProvider";
+import { ThemeContext } from "@/shared/contexts/ThemeProvider";
 import brandLogoLight from "@/assets/logos/Morava-logo-black.svg";
 import brandLogoDark from "@/assets/logos/Morava-logo-white.svg";
 

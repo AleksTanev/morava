@@ -1,8 +1,8 @@
 import { Navbar, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import styles from "./Header.module.scss";
-import ThemeToggleSwitch from "../ThemeToggleSwitch/ThemeToggleSwitch";
-import BrandLogo from "../BrandLogo/BrandLogo";
+import styles from "@/shared/components/Header/Header.module.scss";
+import ThemeToggleSwitch from "@/shared/components/ThemeToggleSwitch/ThemeToggleSwitch";
+import BrandLogo from "@/shared/components/BrandLogo/BrandLogo";
 import classNames from "classnames";
 import { useState } from "react";
 

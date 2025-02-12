@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
-import styles from "./PageNotFound.module.scss";
+import styles from "@/shared/Pages/PageNotFound/PageNotFound.module.scss";
 
 const PageNotfound = () => {
   const navigate = useNavigate();

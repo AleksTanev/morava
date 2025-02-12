@@ -10,32 +10,32 @@ const textBlockItems = [
     {
         heading: "Design",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor ",
-        icon: { url: "./public/misc/3.svg", urlBlack: "./public/misc/3-black.svg", alt: "Design icon" },
+        icon: { url: "./misc/3.svg", urlBlack: "./misc/3-black.svg", alt: "Design icon" },
     },
 
     {
         heading: "Construction",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
-        icon: { url: "./public/misc/1.svg", urlBlack: "./public/misc/1-black.svg", alt: "Maintenance icon" },
+        icon: { url: "./misc/1.svg", urlBlack: "./misc/1-black.svg", alt: "Maintenance icon" },
     },
     {
         heading: "Maintenance",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing ",
-        icon: { url: "./public/misc/2.svg", urlBlack: "./public/misc/2-black.svg", alt: "Construction icon" },
+        icon: { url: "./misc/2.svg", urlBlack: "./misc/2-black.svg", alt: "Construction icon" },
     },
 ];
 
 const slideItems = [
     {
-        src: "./public/home-images/1.jpg",
+        src: "./home-images/1.jpg",
         altText: "Slide 1",
     },
     {
-        src: "./public/home-images/2.jpg",
+        src: "./home-images/2.jpg",
         altText: "Slide 2",
     },
     {
-        src: "./public/home-images/3.jpg",
+        src: "./home-images/3.jpg",
         altText: "Slide 3",
     },
 ];
@@ -44,22 +44,22 @@ const projects: Project[] = [
     {
         title: "Project 1",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project1.jpeg",
+        imgUrl: "./projects/project1.jpeg",
     },
     {
         title: "Project 2",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project2.avif",
+        imgUrl: "./projects/project2.avif",
     },
     {
         title: "Project 3",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project3.avif",
+        imgUrl: "./projects/project3.avif",
     },
     {
         title: "Project 4",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        imgUrl: "./public/projects/project4.avif",
+        imgUrl: "./projects/project4.avif",
     },
 ];
 

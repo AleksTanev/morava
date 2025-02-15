@@ -1,10 +1,12 @@
-# Welcome to the Morava Project, developed by Aleksandar Tanev and Nedyalko Mihalev.
+## Welcome to the Morava Project, developed by Aleksandar Tanev and Nedyalko Mihalev.
 
-## Morava is a gardening/landscaping company that wants to stand out with a custom built website/portfolio.
+### Morava is a gardening/landscaping company that wants to stand out with a custom built website/portfolio.
 
-# Techonologies used: React + TypeScript + Vite + SCSS
+## Techonologies used: React + TypeScript + Vite + SCSS
 
-## To run the project:
+### To run the project:
 - download/clone the morava source on your computer
 - install dependencies with npm install
 - npm run dev
+
+## You can also find the deployed version of master [here.](https://morava-blue.vercel.app/)
